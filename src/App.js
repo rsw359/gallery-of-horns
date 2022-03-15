@@ -4,6 +4,7 @@ import React from 'react';
 import Header from "./Header.js";
 import Main from './Main';
 import Footer from './Footer';
+import data from './data.json'
 
 
 class App extends React.Component {
@@ -11,7 +12,9 @@ class App extends React.Component {
     return(
       <>
         <Header/>
-          <Main />
+          <Main 
+          data = {data}
+          />
         <Footer/>
       </>
     );
