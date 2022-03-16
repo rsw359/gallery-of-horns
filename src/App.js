@@ -11,11 +11,11 @@ class App extends React.Component {
   render(){
     return(
       <>
-        <Header/>
-          <Main 
+        <Header className = "headerCont"/>
+          <Main className = "MainCont "
           data = {data}
           />
-        <Footer/>
+        <Footer className = "FootCont"/>
       </>
     );
 
