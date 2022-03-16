@@ -1,10 +1,12 @@
 import React from 'react';
+import './Header.css'
 
 class Header extends React.Component {
   render() {
     return (
     <header>
-      <h1>Howdy</h1>
+      <h1>Beasts of Horns</h1>
+      <p>This a collection of things with horns. Click on your favorite!</p>
     </header>
     )
   }

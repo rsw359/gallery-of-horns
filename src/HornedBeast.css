@@ -1,0 +1,25 @@
+h2 {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color:#e63946;
+  text-decoration: underline;
+  
+}
+
+
+
+img {
+  width: 200px;
+  height: 200px;
+  
+}
+
+
+/* article {
+  border: solid 1px;
+  border-radius: 5px;
+  margin: .5vw;
+  margin-bottom: 1vw;
+  padding: 1vw;
+  
+} */
+

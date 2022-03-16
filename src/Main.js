@@ -1,24 +1,28 @@
 import React from "react";
 import HornedBeast from "./HornedBeast";
+import './Main.css'
 
 class Main extends React.Component {
   render() {
-    return (
-    <main>
-      <HornedBeast 
-      title = "Rhino" 
-      imgUrl = "https://media.savetherhino.org/prod/uploads/2018/02/Species-Black-Credit-Phill-Perry-768x511.jpg" 
-      description = "This is a horned beast"
-      />
+    console.log(this.props.data);
 
-      <HornedBeast 
-      title = "Triceratos" 
-      imgUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN4j1_TxHu22qjrXzibu-Xpi9RYX9giM0fpQ&usqp=CAU"
-      description = "This too is a horned beast"
+    let animals = [];
+
+    this.props.data.forEach((beast, index) => { animals.push(
+      <HornedBeast
+      imgUrl= {beast.image_url}
+      title={beast.title}
+      description={beast.description}
+      keyword={beast.keyword}
+      horns={beast.horns}
+      key = {index}
       />
+    )})
+    return ( 
       
-
-      </main>
+    <main>
+      {animals}
+    </main>
     )
   }
 }
