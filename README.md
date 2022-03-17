@@ -98,3 +98,12 @@ Start time: 7:45 am
 Finish time: 8:58 am
 
 Actual time needed to complete: 1hr 13 mins because I was playing with the styles
+
+Number and name of feature: Feature #1: Display a Modal
+
+Estimate of time needed to complete: an hour and half
+Start time: 7:05
+
+Finish time: _____
+
+Actual time needed to complete: _____
