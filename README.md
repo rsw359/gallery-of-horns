@@ -104,6 +104,6 @@ Number and name of feature: Feature #1: Display a Modal
 Estimate of time needed to complete: an hour and half
 Start time: 7:05
 
-Finish time: _____
+Finish time: 3:30
 
-Actual time needed to complete: _____
+Actual time needed to complete: 8.5 hours
