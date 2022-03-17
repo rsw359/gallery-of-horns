@@ -2,6 +2,7 @@ import React from "react";
 import Card from 'react-bootstrap/Card'; 
 import './HornedBeast.css'
 
+
 class HornedBeast extends React.Component {
   constructor(props) {
     super(props);
@@ -13,7 +14,10 @@ class HornedBeast extends React.Component {
   handleFavs = () =>{
     this.setState({
       favorites : this.state.favorites + 1
-    })
+    });
+    this.props.stateFunction(this.props.title);
+    this.props.handleModal();
+    
   }
 
   render() {
@@ -24,9 +28,15 @@ class HornedBeast extends React.Component {
     <Card.Img style={{border: 'solid .5px'}}variant="top" src= {this.props.imgUrl} alt="" onClick={this.handleFavs} />
     <Card.Body >
     <Card.Title id = 'title' >{this.props.title}</Card.Title>
-    <Card.Text id = 'cardtxt'>
-      <p>{this.state.favorites} ♥️</p>
-      <p>{this.props.description}</p>
+    <Card.Text id = 'cardtxt' onClick={this.handleFavs}>
+      <span>
+        {this.state.favorites} '♥️'
+      </span>
+      <br/>
+      <span>
+      {this.props.description}
+      </span>
+
     </Card.Text>
     </Card.Body>
     </article>

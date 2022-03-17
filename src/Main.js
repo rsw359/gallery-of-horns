@@ -4,25 +4,27 @@ import './Main.css'
 
 class Main extends React.Component {
   render() {
-    console.log(this.props.data);
+    // console.log(this.props.data);
 
-    let animals = [];
+    
 
-    this.props.data.forEach((beast, index) => { animals.push(
-      <HornedBeast
+    let animal = this.props.data.map((beast, index) => { 
+     return ( <HornedBeast
       imgUrl= {beast.image_url}
       title={beast.title}
       description={beast.description}
       keyword={beast.keyword}
       horns={beast.horns}
       key = {index}
+      handleModal = {this.props.handleModal}
+      hideModal = {this.props.hideModal}
+      stateFunction = {this.props.stateFunction}
       />
     )})
     return ( 
-      
-    <main>
-      {animals}
-    </main>
+      <main>
+      {animal}
+     </main>
     )
   }
 }
