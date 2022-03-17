@@ -16,7 +16,7 @@ class Main extends React.Component {
       keyword={beast.keyword}
       horns={beast.horns}
       key = {index}
-      showModal = {this.props.showModal}
+      handleModal = {this.props.handleModal}
       hideModal = {this.props.hideModal}
       stateFunction = {this.props.stateFunction}
       />

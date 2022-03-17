@@ -16,14 +16,8 @@ class HornedBeast extends React.Component {
       favorites : this.state.favorites + 1
     });
     this.props.stateFunction(this.props.title);
-    this.props.showModal();
-    // this.props.toggleModal(this.props.beast);
-  }
-  
-  onImageClicked = () =>{
-    // this.props.stateFunction(this.props.title);
+    this.props.handleModal();
     
-
   }
 
   render() {
@@ -35,8 +29,14 @@ class HornedBeast extends React.Component {
     <Card.Body >
     <Card.Title id = 'title' >{this.props.title}</Card.Title>
     <Card.Text id = 'cardtxt' onClick={this.handleFavs}>
-      <p>{this.state.favorites} ♥️</p>
-      <p>{this.props.description}</p>
+      <span>
+        {this.state.favorites} '♥️'
+      </span>
+      <br/>
+      <span>
+      {this.props.description}
+      </span>
+
     </Card.Text>
     </Card.Body>
     </article>

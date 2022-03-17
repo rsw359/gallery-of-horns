@@ -13,19 +13,21 @@ class App extends React.Component {
     super(props);
     this.state = {
       selectedBeast: {},
-      showModal:false,
-      
+      showModal:false,     
       
     }
    
   };
 
 
-  showModal = () => {
+  handleModal = () => {
+    console.log('before', this.state)
     this.setState({
       showModal: true,
     
+    
     });
+    console.log('after', this.state)
   };
  
   hideModal = () => {
@@ -37,7 +39,6 @@ class App extends React.Component {
   stateFunction = (title) => {
     console.log(title);
     let thisBeast = data.find(beast => beast.title === title)
-    console.log(thisBeast);
     this.setState({
       selectedBeast: thisBeast
     })
@@ -51,10 +52,11 @@ class App extends React.Component {
         <Main className="MainCont"
           data={data}
           stateFunction={this.stateFunction}
-          toggleModal = {this.openModal}
+          handleModal = {this.handleModal}
           
         />
-        <SelectedBeast theBeast = {this.state.selectedBeast}
+        <SelectedBeast 
+        theBeast = {this.state.selectedBeast}
         showModal = {this.state.showModal}
         hideModal = {this.hideModal}
         />

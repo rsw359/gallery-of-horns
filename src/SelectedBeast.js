@@ -8,19 +8,19 @@ class SelectedBeast extends React.Component {
     return (
       
        <Modal
-       show={this.props.showModal}
+       show = {this.props.showModal}
       //  onHide={this.props.hideModal}
        >
 
-        <Modal.Header> header
-          {/* <Modal.Title>{this.props.title}</Modal.Title> */}
+        <Modal.Header> 
+          {this.props.theBeast.title}
         </Modal.Header>
-        {/* <img src={this.props.imgUrl} alt={this.props.title}></img> */}
-        <Modal.Body> body
-          {/* <p>{this.props.description}</p> */}
+        <img src={this.props.theBeast.image_url} alt={this.props.theBeast.title}/>
+        <Modal.Body> 
+          {this.props.theBeast.description}
         </Modal.Body>
        <Modal.Footer>
-         <Button onclick= {this.props.hideModal}>CLOSE</Button>
+         <Button onClick= {this.props.hideModal}>CLOSE</Button>
        </Modal.Footer>
        </Modal>
   
