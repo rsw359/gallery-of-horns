@@ -8,7 +8,7 @@ class Main extends React.Component {
 
     
 
-    let animal = this.props.data.map((beast, index) => { 
+    let animal = this.props.listBeast.map((beast, index) => { 
      return ( <HornedBeast
       imgUrl= {beast.image_url}
       title={beast.title}
